@@ -2088,6 +2088,11 @@ cc.TargetedAction = cc.ActionInterval.extend(/** @lends cc.TargetedAction# */{
         this._action.update(time);
     },
 
+    reverse: function() { 
+        return cc.TargetedAction.create(this._forcedTarget, this._action.reverse()); 
+    },
+
+
     /**
      * return the target that the action will be forced to run with
      * @return {cc.Node}
